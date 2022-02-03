@@ -8,7 +8,7 @@ class ContactController {
 
     // Wildcard -> Curinga para quando minha API for publica:
     // response.setHeader('Access-Control-Allow-Origin', '*');
-    response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    // response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     response.json(contacts);
   }
 
