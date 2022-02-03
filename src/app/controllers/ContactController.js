@@ -5,6 +5,10 @@ class ContactController {
   async index(request, response) {
     const { orderBy } = request.query;
     const contacts = await ContactRepository.findAll(orderBy);
+
+    // Wildcard -> Curinga para quando minha API for publica:
+    // response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     response.json(contacts);
   }
 
